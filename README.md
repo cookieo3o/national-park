@@ -1,13 +1,17 @@
 # 🌲국립공원 리뉴얼🌲
 > **일관성 있는 UI와 정리된 디자인 환경에서의 사용을 위해 전반적인 리뉴얼을 진행하였습니다😊** <br>
 > **홈페이지💻 https://cookieo3o.github.io/national-park/** <br>
-> **스타일 가이드🎨 https://cookieo3o.github.io/national-park/**
-<br>
 
 
 | Before | Renewal |
 |--------|-------|
-|<img src="images/before.png" width="860">| <img src="images/renewal.png" width="860"> |
+| <img src="images/before.png" width="860">| <img src="images/renewal.png" width="860"> |
+
+| Style Guide |
+|--------|
+| <img src="images/styleguide.png" width="1620"> |
+<br>
+<br>
 
 ## 작업 환경
 ![TOOL](https://img.shields.io/badge/TOOL-VS_CODE-blue) ![TOOL](https://img.shields.io/badge/TOOL-figma-brown) ![TOOL](https://img.shields.io/badge/TOOL-phtoshop-blue) ![TOOL](https://img.shields.io/badge/TOOL-illust-orange) <br>
