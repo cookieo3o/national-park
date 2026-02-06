@@ -1,0 +1,568 @@
+* {margin: 0; padding: 0; box-sizing: border-box; font-size: 20px; font-weight: var(--font-medium);}
+a {color: var(--white); text-decoration: none;}
+li {list-style: none;}
+body  {font-family: var(--font); font-weight: 600; color: var(--gray-80);}
+button {font-family: var(--font); font-weight: 500;  border: none; cursor: pointer;}
+.title {font-family: 'NexenTire'; color: var(--white); font-size: var(--font-50); font-weight: normal;}
+.sub-title {font-family: 'NexenTire'; font-size: var(--font-45); margin-bottom: 35px; margin-left: 5px; font-weight: normal;}
+.park-info-title {font-family: 'NexenTire'; font-size: var(--font-35); margin-bottom: 10px; margin-left: 5px; font-weight: normal;}
+.wrap {padding: 100px 0;}
+
+
+
+
+/* 헤더 */
+.header {background: var(--white); height: 90px; border-bottom: 1px solid #ddd; position: relative;} 
+.header-inner {max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 5px; gap: 15px;}
+.logo-text.sub-title {display: none;}
+.logo {margin-bottom: 10px; flex: 1; background: url(../images/logo-header.png) no-repeat; width: 90px; height: 60px; cursor: pointer;}
+.logo a {display: block; width: 90px; height: 60px;}
+.gnb {flex: 8;}
+.gnb ul {display: flex; list-style: none; padding: 0; margin: 0; justify-content: space-between;}
+.menu-item a {display: block; padding: 30px 0; text-decoration: none; color: var(--gray-80); transition: 0.5s;}
+.menu-item a:hover {font-weight: var(--font-bold); color: var(--hover-text);}
+.nav-icon-wrap {flex: 1; display: flex; align-items: center; justify-content: center;}
+.nav-icon a {color: var(--gray-80);}
+.nav-icon a:nth-child(1) {margin-right: var(--margin-15);}
+
+
+
+
+/* 팝업 */
+#modal {width: 100%; height: 100vh; top: 0; left: 0; position: fixed; background: rgba(0, 0, 0, 0.5); z-index: 5000; display: flex; align-items: center; justify-content: center; transition: 0.5s; opacity: 0; visibility: hidden;}
+#modal.active {opacity: 1; visibility: visible;}
+.popup {width: 1200px; height: 750px; background: var(--white); color: var(--gray-60); border: 2px solid var(--gray-05); position: relative;}
+.popup-title {width: 100%; padding: 30px; margin: auto;}
+.popup-title h3 {font-size: var(--font-40); font-weight: var(--font-semibold); padding-bottom: 20px; border-bottom: 1px solid var(--gray-05);}
+.popup-box {width: 90%; margin: auto;}
+.popup-content {margin-bottom: 20px;}
+.popup-content01 {display: flex; gap: 15px;}
+.pop01-01 {width: 60px; height: 60px; background: var(--sub-color); border-radius: var(--point-radius-20); box-shadow: var(--main-shadow); color: var(--white); text-align: center; line-height: 60px;}
+.pop01-02 {line-height: 60px;}
+.pop01-03 {display: flex; align-items: center; padding: 10px 15px; border: 1px solid var(--gray-60); border-radius: 40px;}
+.popup-content02 {display: flex; gap: 20px;}
+.pop02-01 {display: flex; align-items: center; justify-content: center; gap: 10px;}
+.pop02-title {padding: 10px 20px; border: 1px solid var(--gray-60); border-radius: 40px;}
+.fa-html5 {color: #FA7300;}
+.fa-css3-alt {color: #3291D2;}
+.fa-square-js {color: #821E0A;}
+.popup-content03 {display: flex;  align-items: center; justify-content: center; gap: 55px;}
+.popup-close {position: absolute; top: 30px; right: 30px; cursor: pointer;}
+
+
+
+
+
+/* 서브 메뉴 */
+/* 서브 전체 영역이랑 이미지 영역 */
+/* ⭐visibility가 없어서 계속 서브 메뉴가 opacity: 0;으로 남아있었던 것⭐ */
+.sub-menu {position: absolute; left: 0; right: 0; top: 90px; height: 540px; opacity: 0; transition: max-height 0.4s ease-out, opacity 0.3s ease-out; display: flex; font-weight: var(--font-medium); background: var(--white); z-index: 100; visibility: hidden;}
+.sub-menu.active {display: flex; opacity: 1; visibility: visible;}
+.img-area {width: 440px; position: relative;}
+.img-area img {width: 100%; height: 100%;}
+.nav-img-text {position: absolute; left: 0; bottom: 0; color: var(--white); margin: var(--margin-20);}
+.nav-img-text h2 {font-family: var(--point-font); font-size: var(--font-30); font-weight: var(--font-normal);}
+.nav-img-text p {color: var(--gray-20);}
+
+/* 서브 우측 영역 */
+/* 서브 공통 */
+/* 서브 영역 */
+.sub-area {width: 1160px;  padding: var(--padding-20) var(--padding-10);}
+.sub-area a {font-weight: var(--font-semibold);}
+
+/* 서브 소메뉴 hover 시 */
+.sub-area a:hover {color: var(--hover-text);}
+/* 서브 섹션 */
+.sub-section {border-bottom: 2px solid #F0F0F0; padding: var(--padding-10); display: flex; width: 100%;}
+.sub-section:nth-child(1) {padding-top: 0;}
+/* 서브 대메뉴 좌측 */
+.large-menu {flex-shrink: 0; width: 150px;}
+.large-menu a {display: block; background: var(--gray-05); padding: 5px 12px; color: var(--gray-80); border-radius: var(--point-radius-10); text-align: center; transition: background 0.3s, color 0.1s; flex: 1;}
+.large-menu a:hover {background: var(--hover-text); color: var(--white); font-weight: var(--font-semiBold);}
+/* 서브 소메뉴 우측 */
+.small-menu ul {display: flex; width: 1020px;}
+.small-menu ul li  {margin-left: 15px;}
+.small-menu ul li a {display: block; width: 145px; padding: 5px;  white-space: nowrap; color: var(--gray-60);}
+
+/* 각 메뉴마다 변동 되는 부분 */
+.sub-menu div:last-child {border-bottom: none;}
+/* sub01 국립공원탐방 */
+.sub01-sm-menu02 ul li {margin-bottom: var(--margin-15);}
+.sub01-sm-menu02 ul:last-child li {margin-bottom: 0;}
+.align-right {margin-right: 40px;}
+/* sub02 국립공원예약 */
+.sub02 .large-menu {width: 190px;}
+.align-left {padding-left: 20px;}
+/* sub04 국립공원자원 */
+.sub04 .large-menu {width: 190px;}
+.sub04 .small-menu ul li a {width: 180px;}
+.sub04-sm-menu03 ul li {margin-bottom: var(--margin-15);}
+.sub04-sm-menu03 ul:last-child li {margin-bottom: 0;}
+.sub04-lg-menu01 {position: relative;}
+.sub04-lg-menu01::before {content: 'NEW'; position: absolute; width: 40px; height: 20px; background: var(--white); border-radius: 20px; border: 2px solid var(--gray-20); font-size: 10px; font-weight: var(--font-extrabold); text-align: center; line-height: 20px; left: -10px; top: -15px; transition: 0.2s; z-index: 1000;}
+.sub04-lg-menu01:hover::before {border: 2px solid var(--hover-text); color: var(--hover-text);} 
+/* sub05 행정ㆍ민원 */
+.sub05-sm-menu05 ul li {margin-bottom: var(--margin-15);}
+.sub05-sm-menu05 ul:last-child li {margin-bottom: 0;}
+/* sub06 국민소통 */
+.sub06 .small-menu ul li a {width: 170px;}
+.sub06-sm-menu03 ul li {margin-bottom: var(--margin-15);}
+.sub06-sm-menu03 ul:last-child li {margin-bottom: 0;}
+/* sub07 기관소개 */
+.sub07 .large-menu {width: 160px;}
+.sub07-sm-menu02 ul li {margin-bottom: var(--margin-15);}
+.sub07-sm-menu02 ul:last-child li {margin-bottom: 0;}
+
+
+
+/* 검색창 */
+.search-bar {left: 0; right: 0; height: 200px; background: var(--white); border-radius: 0 0 20px 20px; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.4s; overflow: hidden; position: absolute; top: 90px; z-index: 100;}
+.search-bar.active {display: flex; opacity: 1; visibility: visible;}
+.search-bar-wrap {width: 1015px; height: 50px; border-radius: var( --point-radius-15); border: 2.5px solid var(--gray-40); margin: 150px 0; padding: var(--padding-05) var(--padding-10); display: flex; justify-content: space-between; color: var(--gray-40); transition: all 0.3s ease;}
+.search-input {flex: 9.5; border: none; font-family: var(--font); font-size: var(--font-25); outline: none; color: var(--gray-80);}
+/* 검색창 클릭했을 때 효과 */
+.search-bar-wrap:focus-within {border: 2.5px solid var(--deep-green); box-shadow: var(--main-shadow);}
+.search-bar-wrap:focus-within .search-btn i {color: var(--deep-green);}
+.search-bar-wrap:focus-within input::placeholder {visibility: hidden;}
+/* 검색창 버튼 */
+.search-btn {flex: 0.5; background: none;}
+.search-btn i {font-size: var(--font-30); color: var(--gray-40);}
+/* 검색창 닫기 버튼 */
+.search-close {width: 30px; height: 30px; background: url(../images/search-close.png) no-repeat; position: absolute; right: 470px; top: 20px;}
+.search-close:hover {background: url(../images/search-close-hover.png) no-repeat;}
+
+
+
+
+
+/* 메인 비주얼 */
+.main-visual {background: url('../images/main-bg01.png') no-repeat center/cover; width: 100%;}
+.visual-content {max-width: 1200px; margin: auto; display: flex; flex-direction: column; padding: 85px 0px;}
+/* 메인 타이틀 */
+.main-title {width: 100%; display: flex; margin-bottom: 30px; font-weight: var(--font-normal);}
+.main-title span {color: var(--white); margin-left: 10px; margin-top: 25px;}
+
+/* 메인 콘텐츠 */
+.article-wrap {display: flex; gap: 45px;}
+/* 메인 콘텐츠 좌측 설명 부분 */
+.park-info-box {width: 590px; height: auto; border-radius: 20px; background: rgba(255,255,255); padding: 20px; border-radius: 20px;}
+.park-info-box .sub-title {font-size: 30px;}
+.con-line {width: 540px; height: 2px; background: var(--gray-05);}
+.main-explan-wrap {display: flex; align-items: center; }
+.park-info-box img {width: 100%; text-align: center; padding-top: 10px;}
+/* 
+  여러 줄일 때 말줄임표 만드는 방법
+  display: -webkit-box; → 박스를 만든다
+  -webkit-box-orient: vertical; → 새로로 정렬한다
+  -webkit-line-clamp: 6; → 보여지는 줄 수를 정한다
+  height 값이 없어도 구현되지만 정확하게 하고 싶으면 heigth 값을 넣을 것
+*/
+.main-explan {width: 515px; height: 150px; margin: 15px 10px; color: #666666; font-size: 15px; line-height: 25px; text-align: justify; font-weight: var(--font-light); overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 6;}
+.btn-area {display: flex; justify-content: space-between; margin-top: 10px;}
+.btn-area button {width: 180px; height: 40px; border-radius: 50px; color: var(--white); border: none; position: relative; transition: background 0.5s;}
+.btn-area button a {display: inline-block; line-height: 40px; margin-left: -20px;}
+.condition {background: linear-gradient(45deg, var(--btn-blue01), var(--btn-blue02));}
+.livecctv {background: linear-gradient(45deg, var(--btn-sky-blue01), var(--btn-sky-blue02));}
+.btn-area button:hover {background: linear-gradient(45deg, var(  --point-pink01), var(--point-pink02));}
+.btn-area button::after {content: ''; display: block; background: url(../images/btn-arrow.png) no-repeat; width: 10px;  height: 18px; top: 11px; right: 15px; position: absolute; transform: translateX(0); transition: transform 0.2s ease;}
+.btn-area button:hover::after {transform: translateX(3px);}
+
+/* 메인 콘텐츠 우측 지도 */
+.map-box {width: 100%; height: auto; background: rgba(255, 255, 255, 0.5); border-radius: 20px; display: flex; align-items: center; justify-content: center; position: relative;}
+.map-btn-wrap {width: 100%; height: auto; top: 0; left: 0; z-index: 30;}
+.map-btn {background: var(--gray-bg); border-radius: 25px; transform-origin: center;  position: absolute; transition: backgound 0.3s;}
+/* 버튼 오버 시 효과 */
+.map-btn:hover {background: var(--hover-bg); box-shadow: var(--main-shadow);}
+.map-btn:hover::before {content: ''; position: absolute; background: url(../images/pointer.svg) no-repeat; width: 30px; height: 38px; display: block; top: -90%; left: 35%; animation: pointer 1s infinite; transition: ease;} 
+@keyframes pointer {
+  0% {transform: translateY(0);}
+  50% {transform: translateY(3px);}
+  100% {transform: translateY(0);}
+}
+.map-btn a {display: block; padding: 6px 20px;}
+.map-box img {margin-left: 100px;}
+/* 메인 콘텐츠 우측 지도 버튼 위치 */
+/* 순서는 좌 → 우로 작업 */
+.map-btn01 {top: 90px; left: 125px;}      /* 북한산 */
+.map-btn02 {top: 120px; left: 225px;}     /* 치악산 */
+.map-btn03 {top: 55px; right: 125px;}     /* 설악산 */
+.map-btn04 {top: 105px; right: 90px;}     /* 오대산 */
+.map-btn05 {top: 155px; right: 110px;}    /* 태백산 */
+.map-btn06 {top: 210px; left: 65px;}      /* 태안해안 */
+.map-btn07 {top: 200px; left: 250px;}     /* 월악산 */
+.map-btn08 {top: 200px; right: 115px; z-index: 1;}    /* 소백산 */
+.map-btn09 {top: 240px; left: 220px; z-index: 1;}     /* 속리산 */
+.map-btn10 {top: 285px; left: 135px;}     /* 계룡산 */
+.map-btn11 {top: 320px; left: 210px;}     /* 덕유산 */
+.map-btn12 {top: 300px; right: 80px;}     /* 주왕산 */
+.map-btn13 {bottom: 280px; left: 70px;}   /* 변산반도 */
+.map-btn14 {bottom: 235px; left: 160px;}  /* 내장산 */
+.map-btn15 {bottom: 230px; right: 215px;  z-index: 1;} /* 가야산 */
+.map-btn16 {bottom: 215px; right: 100px;} /* 경주 */
+.map-btn17 {bottom: 105px; left: 80px;}   /* 월출산 */
+.map-btn18 {bottom: 115px; left: 180px;}  /* 다도해해상 */
+.map-btn19 {bottom: 140px;  right: 150px;}/* 한려해상 */
+.map-btn20 {bottom: 35px;  left: 130px;}  /* 한라산 */
+/* ⭐빼먹은 거 3개⭐ */
+.map-btn21 {bottom: 190px; left: 80px;}   /* 무등산 */
+.map-btn22 {bottom: 185px; left: 200px; z-index: 5;}  /* 지리산 */
+.map-btn23 {bottom: 285px; left: 300px;}  /* 팔공산 */
+
+.map-text {position: absolute; bottom: 15px; right: 20px; font-size: var(--font-15); font-weight: var(--font-bold);}
+
+
+
+
+/* 즐겨 찾는 정보 */
+.quick-menu {max-width: 1200px; margin: auto; padding: 95px 0; text-align: center;}
+.quick-menu .sub-title {text-align: center; margin-bottom: 10px; color:  var(--sub-color);}
+.quick-items {display: flex; justify-content: center; gap: 35px; margin-top: 20px; position: relative;}
+/* 즐겨 찾는 정보 아이콘 */
+.quick-items .item {width: 120px; height: 100px; position: relative; cursor: pointer;  transition: 0.2s ease; background-position: 0 0;}
+.item:hover {background-position: 0 -120px;}
+.item::after {content: ''; position: absolute; width: 155px; height: 3px; background: #D7D7D7; bottom: -40px; left: -20px;}
+.item:hover:after {background:  var(--hover-bg);}
+.item:hover p {color:  var(--hover-bg); font-weight: 800;}
+.quick-items .item p {position: absolute; bottom: -20px; left: -15px; width: 150px; transition: 0.5s;}
+/* 즐겨 찾는 정보 아이콘 이미지 */
+.icon1 {background: url(../images/bookmark-01.png) no-repeat;}
+.icon2 {background: url(../images/bookmark-02.png) no-repeat;}
+.icon3 {background: url(../images/bookmark-03.png) no-repeat;}
+.icon4 {background: url(../images/bookmark-04.png) no-repeat;}
+.icon5 {background: url(../images/bookmark-05.png) no-repeat;}
+.icon6 {background: url(../images/bookmark-06.png) no-repeat;}
+.icon7 {background: url(../images/bookmark-07.png) no-repeat;}
+.icon8 {background: url(../images/bookmark-08.png) no-repeat;}
+
+
+
+
+
+/* 국립공원 알림 부분 */
+.notice-banner {position: relative;}
+.notice-banner::before {content: ''; position: absolute; width: 1670px; height: 745px; border-radius: 0 100px 100px 100px; background: rgba(220, 250, 255, 0.7); top: 0; z-index: -5;}
+.notice-banner::after {content: ''; position: absolute; background: url(../images/bg-pattern.png) no-repeat; width: 100%; height: 1080px; top: 250px; right: 0; z-index: -500;}
+.banner-list-wrap {max-width: 1200px; margin: auto;}
+.banner-list {display: flex; justify-content: space-between; max-width: 1200px; margin: auto; gap: 20px;}
+.banner-card {flex: 1; height: 320px; border-radius: 15px; box-shadow: var(--main-shadow); background-position: center;  background-size: 100%;  transition: background-size 0.4s ease, transform 0.4s ease; position: relative;}
+.banner-list .banner-card:nth-child(2n) {margin-top: 130px;}
+/* 국립공원 알림 이미지 */
+.banner-card.card1 {background: url(../images/notice01.png) no-repeat center / cover;}
+.banner-card.card2 {background: url(../images/notice02.png) no-repeat center / cover;}
+.banner-card.card3 {background: url(../images/notice03.png) no-repeat center / cover;}
+.banner-card.card4 {background: url(../images/notice04.png) no-repeat center / cover;}
+.banner-card.card5 {background: url(../images/notice05.png) no-repeat center / cover;}
+.banner-card::after {content: ''; display: block; transform: translate(-50%, -50%) scale(0.9); top: 50%; left: 50%; opacity: 0; transition: 0.3s;}
+/* 호버 시 비포 값 */
+.banner-card:hover::before {content: ''; position: absolute; width: 100%; height: 320px; background: rgba(0, 0, 0, 0.5); border-radius: 15px; }
+.banner-card:hover::after {content: ''; position: absolute; width: 120px; height: 120px; background: url(../images/notice-plus.svg) no-repeat; transform: translate(-50%, -50%); top: 50%; left: 50%; opacity: 1;} 
+
+
+
+
+
+/* 최신소식 */
+.news {position: relative;}
+.news::before {content: ''; position: absolute; width: 1670px; height: 895px; border-radius: 100px 100px 0 100px; background: rgba(185, 225, 255, 0.7); right: 0; z-index: -5;}
+.news-wrap {max-width: 1200px; margin: auto; padding: 95px 0;}
+.tab-menu {display: flex; justify-content: space-between;  width: 100%; margin-bottom: 20px;}
+.news-btn-wrap {display: flex; gap: 25px;}
+.news-btn {width: 160px; height: 50px; border-radius: 0 10px 10px 10px; background:  var(--sea-blue); }
+.news-btn a {color: var(--white); font-size: 25px; font-weight: var(--font-semibold);}
+.news-btn:hover {background: linear-gradient(45deg, var(--btn-blue01), var(--btn-blue02)); font-weight: var(--font-semibold); box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);}
+.news-btn.active {background: linear-gradient(45deg, var(--btn-blue01), var(--btn-blue02)); font-weight: var(--font-semibold); box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);}
+.plus-btn {background: url(../images/plus.png) no-repeat 0 0; width: 30px; height: 30px; margin-top: 10px; cursor: pointer; transition: background-position 0.2s ease;}
+.plus-btn a {display: block; width: 30px; height: 30px;}
+.plus-btn:hover {background-position: -30px 0;}
+
+/* 탭 클릭 시 바뀌는 내용 부분 */
+.news {width: 100%; height: 995px; margin-bottom: 100px;}
+.news-list {width: 1200px; display: none; flex-wrap: wrap; gap: 20px;}
+.news-list.active {display: flex;}
+.news-item {width: 590px; height: 260px; background: var(--white); padding: 30px; border-radius: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); cursor: pointer; border: 2px solid transparent}
+.news-item span {background: var(--gray-04); color:  var(--deep-sea-blue); width: 100px; height: 30px; border-radius: 20px; text-align: center; padding: 5px 20px; font-size: 15px; font-weight: 700;}
+.news-text-box {width: 475px; height: 155px; margin: 25px auto; position: relative; text-overflow: ellipsis;}
+.news-text-box h3 {font-size: 25px; font-weight: var(--font-medium); width: 470px;}
+.news-text-box time {color:  var(--gray-40); font-weight: var(--font-light); bottom: 0; position: absolute;}
+.news-item:hover {box-shadow: var(--main-shadow); border: 2px solid #0091E6;}
+
+
+
+
+/* 지금 국립공원은 */
+/* 전체 */
+.now-gallery {position: relative; width: 100%; height: auto; overflow: hidden;}
+/* 전체 안 섹션 */
+.now-gallery-wrap {width: 100%; margin: 100px 0; padding: 0; display: flex; align-items: center; justify-content: center;} 
+.now-gallery-wrap .sub-title {color: var(--white); margin-bottom: 50px;}
+.gallery-bg {background: var(--gray-03); width: 100%; height: 1200px; position: relative; position: absolute; top: 0; z-index: -10;}
+.gallery-bg::before {content: ''; position: absolute; width: 100%; height: 200px; background: linear-gradient(180deg, var(--gray-07) 0%, var(--gray-03) 25%); top: 0;}
+.gallery-bg-img {background: url(../images/now-bg.png) no-repeat; width: 765px; height: 810px; position: absolute; left: 0; top: 95px; border-radius: 0 100px 100px 100px; z-index: -5;}
+/* 섹션 안 내용 */
+.gallery-layout {display: flex; gap: 170px; margin-top: 100px;}
+
+/* 왼쪽 버튼 부분 */
+.left-menu-wrap {margin-left: 290px;}
+.left-menu {display: flex; flex-direction: column; gap: 20px; border-left: 3px solid rgba(180, 180, 180, 0.8);}
+.gallery-btn {width: 285px; height: 60px; color: var(--white); padding: 5px 25px; text-align: left; font-size: 30px; cursor: pointer; position: relative; border-radius: 0 50px 50px 0; background: transparent; margin-left: -3px; z-index: 5;}
+.gallery-btn::after {content: ''; position: absolute; width: 285px; height: 60px; background: linear-gradient(45deg, var(--btn-blue01), var(--btn-blue02)); border-radius: 0 50px 50px 0; left: 0; top: 0; z-index: -1; opacity: 0; transition: 0.2s; border-left: 3px solid var(--white);}
+.gallery-btn.active::after {opacity: 1;}
+.gallery-btn:hover::after {opacity: 1;}
+.gallery-btn::before {content: ''; position: absolute; background: url(../images/btn-arrow-big.png) no-repeat; width: 15px; height: 30px; right: 25px; top: 16px; transition: 0.2s; opacity: 0;}
+.gallery-btn:hover::before {content: ''; position: absolute; background: url(../images/btn-arrow-big.png) no-repeat; width: 15px; height: 30px; right: 20px; top: 16px; opacity: 1;}
+.gallery-btn.active::before {opacity: 1;}
+
+/* 오른쪽 슬라이드 부분 */
+/* 슬라이드 우선 안 보이게 */
+.slide-wrap {display: flex; flex-wrap: wrap; overflow: hidden; width: 1100px; margin: 100px 0; padding: 20px;}
+.gallery-slide {display: none; gap: 30px;}
+.gallery-slide.active {display: flex; }
+.gallery-slide img {width: 380px; height: 460px;}
+/* 슬라이드 제어바 부분 */
+.gallery-control {width: 80%; margin-top: 30px;}
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 90%;
+  height: 10px;
+  background: #969696;
+  border-radius: 10px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  background: var(--btn-blue02);
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  box-shadow: var(--main-shadow);
+  cursor: pointer;
+}
+
+
+/* 푸터 */
+.footer {width: 100%; background: var(--dark-navy); color: var(--white); font-weight: var(--font-light);}
+.footer-wrap {width: 1200px; margin: auto; padding: 50px 0px; text-align: center; display: flex; flex-direction: column;}
+.footer-menu {display: flex; justify-content: space-around; margin: 25px 0;}
+.footer-menu a {display: block; padding: 5px 25px; font-weight: var(--font-light); position: relative;}
+.footer-menu a::after {content: ''; position: absolute; width: 2px; height: 15px; background: var(--white); right: 0; top: 10px}
+.footer-menu a:last-child::after {opacity: 0;}
+.footer-bottom {display: flex; align-items: center; justify-content: space-between; padding: 30px 0;  border-top: 1px solid rgba(240, 240, 240, 0.5);}
+.add-text {text-align: left; flex: 8; line-height: 30px;}
+.sns-icon-wrap {display: flex; flex: 2; gap: 5px;}
+
+
+
+
+/* 모바일 메뉴 웹에서는 안 보임 */
+.mobile-menu {display: none;}
+/* 메인 비주얼 위 버튼 웹에서는 안 보임 */
+.mobile-btn-area {display: none;}
+
+/* ⭐⭐⭐반응형⭐⭐⭐ */
+@media (max-width: 768px){
+  * {margin: 0; padding: 0; box-sizing: border-box;}
+  html, body {width: 100%; overflow-x: hidden;}
+  body > * {overflow-x: hidden;}
+  .wrap {padding: 60px 0;}
+  .sub-title {font-size: var(--font-35); margin-bottom: var(--margin-40); text-align: center;}
+  .notice-banner::after, .notice-banner-bg::after, .news::before {content: none; visibility: hidden;}
+
+
+  /* 헤더 */
+  .header {width: 100%; padding: 10px; overflow: hidden;}
+  .header-inner {width: 90%; margin: auto;}
+  .logo {flex: 0 0 auto; margin-bottom: 10px; background: url(../images/logo-header.png) no-repeat; width: 90px; height: 60px; cursor: pointer;}
+  .logo a {width: 100%;}
+  .gnb {display: none;}
+  .nav-icon-wrap {flex: 0 0 auto;}
+  .search-bar {display: none;}
+  .nav-icon {display: none;}
+  .toggle {width: 25px; display: flex; flex-direction: column; gap: 4px;  margin-left: 5px; cursor: pointer;} 
+  .toggle-bar {width: 100%; height: 4px; background: var(--gray-80); border-radius: 5px; display: inline-block;}
+  .toggle.active span:nth-child(1) {transform: rotate(90deg);}
+
+
+
+  /* 메인 비주얼 위 버튼 */
+  .mobile-btn-area {width: 100%; margin: 30px 0; display: flex; align-items: center; justify-content: center;}
+  .mobile-btn-wrap {width: 90%; display: flex;justify-content: space-between;}
+  .mobile-btn-wrap button {width: 180px; height: 40px; border-radius: 50px; color: var(--white); border: none; position: relative; transition: background 0.5s;}
+
+
+  /* 메인 비주얼 */  
+  .park-info-title {display: none;} 
+  .main-expan-wrap img {display: none;}
+  .main-expan-wrap p {display: none;}
+  .con-line {display: none;}
+  .park-info-box {display: none;}
+  /* .park-info-box {position: absolute; top: -100px; width: 100%; padding: 20px 0; justify-content: space-around; background: none; overflow: hidden;} */
+  .main-visual {width: 100%; height: auto; position: relative;}
+  .visual-content {width: 90%; min-height: 545px; padding: 50px 0;}
+  .title {font-size: var(--font-35); padding: 0;}
+  .main-title {justify-content: center;}
+  .main-title span {display: none;}
+  .article-wrap {width: 100%;}
+  .map-text { display: none;} 
+  .map-box img {display: none;}
+  /* 버튼 래퍼를 grid로 */
+  .map-box {background: none;}
+  .map-btn-wrap {display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; width: 100%;  margin: 0 auto; row-gap: 20px;}
+  /* 버튼 공통 */
+  .map-btn {position: static; width: 100%; max-width: none; height: 45px; background: rgba(255, 255, 255, 0.5); border-radius: 0; display: flex; align-items: center; justify-content: center;}
+  .map-btn a {width: 100%; color: var(--gray-80); font-size: clamp(16px, 1.2vw, 20px);}
+  .map-btn:hover a {color: var(--white);}
+  /* 각 줄의 첫 번째 */
+  .map-btn:nth-child(4n + 1) {border-radius: 30px 0 0 30px;}
+  .map-btn:nth-child(4n), .map-btn20 {border-radius: 0 30px 30px 0;}
+  /* 호버 효과 없애기 */
+  .map-btn:hover::before {content: none;}
+  
+
+
+  /* 즐겨 찾는 정보 */
+  .quick-menu {width: 85%; height: auto; padding: 60px 0;}
+  .quick-items {flex-wrap: wrap;}
+  .quick-items .item {margin-top: 20px;}
+
+
+  
+  /* 국립공원 알림 */  
+  .notice-banner {background: rgba(230, 245, 255, 0.7);}
+  .banner-list-wrap {width: 85%; height: auto;}
+  .banner-list {flex-wrap: wrap;  gap: 20px;}
+  .banner-card {flex: 0 0 45%; max-width: 45%; background-size: contain;}
+  .banner-list .banner-card:nth-child(2n) {margin-top: 0px;}
+
+
+
+  /* 최신 소식 */
+  .news::before {content: none;}
+  .news {height: auto; margin: 0;}
+  .news-wrap {padding: 0;}  
+  .news-btn-wrap {display: none;} 
+  .tab-menu {display: none;}
+  .news-list {display: flex; width: 100%;}
+  .news-list > :not(:first-child) {display: none;}
+  .news-item {width: 100%; border-radius: 0; border-top: 3px solid var(--gray-15); border-bottom: 3px solid var(--gray-15); margin-bottom: 30px;  box-shadow: none; transition: none;}
+  .news-item:hover {border-top: 3px solid #0091E6; border-bottom: 3px solid #0091E6; border-left: 0; border-right: 0; box-shadow: none;}
+  .news-text-box {width: 90%;}
+  .news-text-box h3 {width: 100%; line-height: 40px;}
+  .news-text-box time {right: 0;}
+
+
+
+  /* 지금 국립공원은 */ 
+  .now-gallery {width: 100%;}
+  .now-gallery-wrap {width: 100%; margin-top: 50px;} 
+  .gallery-layout {width: 95%; height: auto; flex-direction: column; gap: 30px; margin-top: 0px; align-items: center;}
+  .gallery-bg {background: url(../images/now-bg.png) no-repeat;}
+  .gallery-bg::before {content: none;}
+  .gallery-bg-img {background: none;}
+
+  .left-menu-wrap {width: 100%; margin-left: 0;}
+  .left-menu-wrap .sub-title {margin: 40px 0px;}
+  .left-menu {flex-direction: row;  gap: 15px; border-left: none; overflow-x: auto;  -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .gallery-btn {text-align: center; margin-left: 0px; padding: 0px 10px; font-size: var(--font-20); background: rgba(255, 255, 255, 0.7); border-radius: var(--radius-30); color: var(--gray-80); font-weight: var(--font-semibold); border: 1px solid var(--gray-15); flex: 0 0 auto; max-width: 200px; max-height: 45px;}
+  .gallery-btn::after, .gallery-btn::before, .gallery-btn:hover::after, .gallery-btn:hover::before {content: none;}
+  .gallery-btn.active {background: linear-gradient(45deg, var(--btn-blue01), var(--btn-blue02)); color: var(--white);}
+
+  .slide-wrap {width: 100%; height: 300px; margin: 0; padding: 0; margin-left: 30px;}
+  .gallery-slide {width: max-content; white-space: nowrap;}
+  .gallery-slide a {display: inline-block;}
+  .gallery-slide a img {width: 190px; height: auto;}
+  
+  .gallery-control {margin-top: 10px;}
+  input[type="range"]::-webkit-slider-thumb {
+    width: 25px;
+    height: 25px;
+  }
+
+
+
+  /* 풋터 */
+  .footer-wrap {width: 80%; flex-direction: column-reverse; overflow: hidden;}
+  .footer-logo {display: none;}
+  .footer-menu {width: 100%; flex-wrap: wrap; justify-content: left; font-size: var(--font-15);}
+  .footer-menu a {padding: 10px 15px;}
+  .footer-menu a::after {content: ''; position: absolute; width: 2px; height: 15px; background: var(--white); right: 0; top: 15px}
+  .footer-bottom {flex-direction: column-reverse; padding: 0; align-items: flex-start; margin: 0 20px; padding-top: 30px; border: none;}
+  .add-text {font-size: var(--font-15); font-size: var(--font-15); padding-top: 30px; border: none;}
+  .add-text span {font-weight: var(--font-bold);}
+  .sns-icon-wrap {padding-bottom: 30px; width: 100%; align-items: center; justify-content: center; gap: 10px; margin: auto;  border-bottom: 1px solid rgba(240, 240, 240, 0.5);}
+  .sns-icon-wrap a img {width: 40px; height: 40px;}
+
+
+
+  /* 모바일 메뉴 */
+  .mobile-menu {display: block; position: fixed; top: 82px; right: 0; left: 0; bottom: 0; background: var(--white); visibility: hidden; opacity: 0; z-index: 1000;}
+  .mobile-menu.active {opacity: 1; visibility: visible;}
+  .accordion-menu a {font-weight: var(--font-bold); color: var(--gray-80);}
+  .accordion-menu-title {border-bottom: 1px solid var(--gray-15);}
+  /* 대메뉴 */
+  .accordion-menu-title a {width: 100%; display: block; padding: 15px; color: var(--gray-80); text-align: center;}
+  .accordion-menu-title.active a {background: linear-gradient(45deg, var(--btn-blue01), var(--btn-blue02)); color: var(--white);}
+  .accordion-menu-title a:hover {background: linear-gradient(45deg, var(--btn-blue01), var(--btn-blue02)); color: var(--white);}
+  .accordion-title {border-bottom: 1px solid var(--gray-15);}
+  .accordion-title a {width: 100%; display: block; background: #F2F2F2; padding: 15px; text-align: center;}
+  .accordion-title a:hover {background: var(--white); color: var(--hover-text);}
+  .accordion-item {max-height: 0; overflow: hidden; position: relative; transition: max-height 0.4s ease-out}
+  .accordion-item.active {max-height: 600px;}
+  .accordion-content {max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out;}
+  .accordion-content.active {max-height: 600px;}
+  .accordion-content ul li a {display: block; padding: 15px 0; text-align: center;}
+  .accordion-content ul li a:hover {color: var(--hover-text); }  
+}
+
+
+
+
+/* 클릭 유도 */
+.gnb ul li:first-child a,
+.sub01-lg-menu01 a,
+.gnb ul li:nth-child(4) a,
+.nav-icon a,
+.plus-btn,
+.sub04-lg-menu01 a,
+.sub04-sm-menu02 li:first-child,
+.sub04-sm-menu03 ul:first-child li:first-child,
+.sub04-sm-menu04 ul:first-child li:first-child,
+.side-menu
+{position: relative;}
+
+/* 원래 모양 → 메인 메뉴 */
+.gnb ul li:first-child a::after,
+.nav-icon a::after,
+.plus-btn::after,
+.sub01-lg-menu01 a::after,
+.gnb ul li:nth-child(4) a::after
+{content: 'click'; position: absolute; width: 40px; height: 40px; background: var(--btn-blue01); border-radius: var(--point-radius-15); color: var(--white); font-size: var(--font-15); animation: click 1s infinite; bottom: -10px; right: -40px; z-index: 500; text-align: center; line-height: 40px; box-shadow: var(--main-shadow);}
+/* 반대 모양 → 서브 메뉴 */
+.sub04-lg-menu01 a::after,
+.sub04-sm-menu02 li:first-child::after,
+.sub04-sm-menu03 ul:first-child li:first-child:after,
+.sub04-sm-menu04 ul:first-child li:first-child:after,
+.side-menu::after
+{content: 'click'; position: absolute; width: 40px; height: 40px; background: var(--btn-blue01); border-radius: 15px 15px 15px 0; color: var(--white); font-size: var(--font-15); animation: click 01s infinite; top: -40px; right: -40px; z-index: 500; text-align: center; line-height: 40px; box-shadow: var(--main-shadow);}
+
+.nav-icon a::after
+{top: 25px; right: -40px;}
+.nav-icon a:first-child::after
+{right: -35px;}
+.plus-btn::after
+{bottom: -40px;}
+.sub01-lg-menu01 a::after
+{bottom: -40px;}
+.sub04-sm-menu02 li:first-child::after
+{left: 90px; top: -35px;}
+.sub04-sm-menu03 ul:first-child li:first-child:after
+{left: 125px; top: -35px;}
+.sub04-sm-menu04 ul:first-child li:first-child:after
+{left: 115px; top: -35px;}
+.side-menu::after
+{right: -35px;}
+
+@keyframes click {
+  0% {opacity: 1;}
+  50% {opacity: 1; background: var(--point-pink01);}
+}

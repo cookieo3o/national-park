@@ -1,0 +1,154 @@
+#nav-placeholder {width: 100%;}
+
+
+/* 전체 */
+.sub01-wrap {width: 100%; margin-bottom: 50px;}
+.sub01 {width: 1200px; display: flex; margin: 0 auto; padding-top: 85px; gap: 35px;}
+
+
+/* 왼쪽 부분 */
+.side-menu-wrap {flex: 2; display: flex; gap: 15px; flex-direction: column; margin-top: 70px;}
+.side-menu {width: 100%; position: relative; transition: transform 0.3s ease; z-index: 0;}
+.side-menu-btn {width: inherit; background: var(--gray-05); border-radius: var(--point-radius-15); text-align: left; padding: 15px 20px; color: var(--gray-80); font-weight: var(--font-semibold); transition: background 0.25s ease; position: relative; z-index: 5;}
+.side-menu-btn a {display: block; color: var(--gray-80); font-weight: var(--font-semibold);}
+.side-menu-btn a:hover {color: var(--white);}
+.side-menu-btn::before {content: '';  background: url(/images/btn-arrow-gray.png) no-repeat; width: 18px; height: 20px; position: absolute; right: 0; transform: translateY(-50%) rotate(0deg); transform-origin: left center; transition: transform 0.2s ease; top: 55%;}
+.side-menu-btn:hover {background: linear-gradient(45deg, var(--btn-blue01), var(--btn-blue02)); border-radius: var(--point-radius-15); color: var(--white);}
+.side-menu-btn:hover::before {content: '';  background: url(/images/btn-arrow.png) no-repeat; transform: translateY(-50%) rotate(90deg); transform-origin: left center; top: 45%;}
+.side-menu-btn.active {background: linear-gradient(45deg, var(--btn-blue01), var(--btn-blue02)); border-radius: var(--point-radius-15); color: var(--white);}
+.side-menu-btn.active::before {background: url(/images/btn-arrow.png) no-repeat; transform: translateY(-50%) rotate(90deg); transform-origin: left center; top: 45%;}
+
+.side-menu-pan {width: inherit; background: var(--bg-blue); position: absolute; left: 0; top: 25px; border-radius: var(--point-radius-15); max-height: 0; overflow: hidden; transition: max-height 0.3s ease;}
+.side-menu-pan.active {max-height: 1200px; overflow: visible;}
+.side-menu-pan ul li a {display: block;  padding: 15px 20px; font-size: var(--font-15); color: var(--gray-80); }
+.side-menu-pan ul li a:hover {color: var(--sub-color); font-weight: var(--font-extrabold);}
+.side-menu-pan ul li:first-child {padding-top: 25px;}
+
+
+
+/* 오른쪽 부분 */
+/* 상단 타이틀 */
+.a-side {flex: 9;}
+.intro-title-wrap {display: flex; align-items: center; justify-content: space-between;}
+.intro-title {font-family: var(--point-font); font-size: var(--font-35); color: var(--sub-color);}
+.intro-nav {display: flex;}
+.intro-nav a {display: block; padding: 0 15px; font-size: var(--font-15); color: var(--gray-40); position: relative;}
+.intro-nav a::after {content: ''; position: absolute; top: 3px; right: 0; width: 1px; height: 70%; background: var(--gray-40);}
+.intro-nav a:last-child {color: var(--gray-60);}
+.intro-nav a:last-child::after {content: none;}
+
+
+
+/* 배너 */
+.sub-banner {width: 100%; height: 250px; border-radius: var(--radius-15); background: url(/images/sub02-banner.png) center center / cover; margin-top: 20px; position: relative; margin-bottom: 40px;}
+.banner-text {position: absolute; top: 25%; left: 5%;color: var(--white);}
+.banner-text h3 {display: inline-block; font-family: var(--point-font); font-size: var(--font-25); background: #005A9B; padding: 8px 20px 5px 20px; border-radius: 30px;}
+.banner-text p {width: 60%; font-weight: var(--font-regular); line-height: 40px; margin-left: 50px; margin-top: 15px;}
+.banner-text .highlight {font-size: var(--font-25); font-weight: var( --font-semibold);}
+
+
+/* 본문 내용 */
+/* 공통 */
+.paragraph {width: 90%; margin: auto; margin-bottom: 75px;}
+.paragraph h2 {font-size: var(--font-30); font-weight: var(--font-bold); color: var(--sub-color); margin-bottom: 15px;}
+.paragraph p {font-weight: var(--font-medium); text-align: justify; line-height: 25px;}
+
+/* VR */
+.thumnail-wrap {width: 100%; display: flex; flex-wrap: wrap; gap: 55px; margin-top: 30px;}
+.vr-thumnail {width: 45%; height: 360px; border-radius: var(--radius-20); position: relative; cursor: pointer; overflow: hidden; transition: box-shadow 0.5s;}
+/* absulute 후 가로 세로 길이를 줘야하는 이유는 부모 위치에 있고 그 부모 영역을 강제로 덮기 위함 */
+.vr-thumnail a {display: block; position: absolute; width: 100%; height: 100%; z-index: 10; transition: 0.3s;}
+.vr-thumnail a p {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);  width: 75%; font-size: var(--font-25); font-weight: var(--font-semibold); color: var(--white); text-align: center; line-height: 30px;}
+.vr-image {width: 100%; height: 100%; z-index: 0; transition: transform 0.5s;}
+.vr-thumnail::before {content: ''; position: absolute; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 5; transition: 0.5s;}
+/* 이미지 호버 시 효과 */
+.vr-thumnail:hover {box-shadow: var(--main-shadow);}
+.vr-thumnail:hover a  {opacity: 0;}
+.vr-thumnail:hover::before {background: rgba(0, 0, 0, 0);}
+.vr-thumnail:hover .vr-image {transform: scale(1.1);}
+
+/* 이미지 바뀌는 부분 */
+.vr-image01 {background: url(/images/vr-image01.png) no-repeat;}
+.vr-image02 {background: url(/images/vr-image02.png) no-repeat;}
+.vr-image03 {background: url(/images/vr-image03.png) no-repeat;}
+.vr-image04 {background: url(/images/vr-image04.png) no-repeat;}
+.vr-image05 {background: url(/images/vr-image05.png) no-repeat;}
+.vr-image06 {background: url(/images/vr-image06.png) no-repeat;}
+.vr-image07 {background: url(/images/vr-image07.png) no-repeat;}
+.vr-image08 {background: url(/images/vr-image08.png) no-repeat;}
+
+
+
+/* 하단 배너 */
+.banner {width: 100%; height: 225px; background-size: cover; margin-bottom: 40px; position: relative;}
+.banner01 {background: url(/images/sub02-multi.png) no-repeat center / contain;}
+.banner02 {background: url(/images/sub02-webtoon.png) no-repeat center / contain;}
+
+/* 배너 버튼 */
+.banner-btn {width: 180px; height: 40px; border-radius: 50px; color: var(--white); border: none; position: relative; background: linear-gradient(45deg, var(--btn-blue01), var(--btn-blue02)); transition: background 0.5s; position: absolute; bottom: 10%; left: 7%;}
+.banner-btn a {display: inline-block; line-height: 40px;}
+.banner-btn::after {content: ''; display: block; background: url(../images/btn-arrow.png) no-repeat; width: 10px;  height: 18px; top: 11px; right: 15px; position: absolute; transform: translateX(0); transition: transform 0.2s ease;}
+.banner01 .banner-btn a {margin-left: -20px;}
+/* 배너 버튼 호버 시 효과 */
+.banner-btn:hover {background: linear-gradient(45deg, var(--point-pink01), var(--point-pink02));}
+.banner-btn:hover::after {transform: translateX(3px);}
+.paragraph:nth-of-type(3) {padding-bottom: 50px;}
+
+
+
+/* ⭐⭐⭐반응형⭐⭐⭐ */
+@media (max-width: 768px){
+  * {margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {width: 100%;}
+
+  .sub01-wrap {margin-bottom: 100px;}
+  .sub01 {width: 100%; margin: 0; padding: 0; overflow: hidden;}
+  .a-side {width: 100%;}
+  .side-menu-wrap {display: none;}
+  .intro-title-wrap {width: 100%; display: flex; align-items: center; justify-content: center;}
+  .intro-title {margin: 0; text-align: center; padding: 30px 0;}
+  .intro-nav {display: none;}
+  .sub-banner {border-radius: 0; text-align: center; margin: 0;}
+  .banner-text {width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+  .banner-text h3 {padding: 8px 20px 5px 20px;}
+  .banner-text p {width: 80%; text-align: justify; line-height: 30px;}
+
+  /* VR */
+  .paragraph {width: 100%; text-align: center; margin-top: 50px;}
+  .paragraph:last-child {margin: 0; padding: 0;}
+  .paragraph p {text-align: center; margin-bottom: 50px;}
+  .thumnail-wrap {width: 100%; flex-direction: column; gap: 15px;}
+  .vr-thumnail {width: 100%; height: 195px; border-radius: 0;}
+  .vr-thumnail a p {overflow-y: hidden;}
+  .vr-thumnail::before {top: 0; left: 0; ;}
+  .vr-image {background-size: cover;}
+
+  /* 하단 배너*/
+  .banner {width: 100%; height: 280px;}
+  .banner01 {background: url(/images/sub02-multi-mobile.svg) no-repeat top / cover;}
+  .banner02 {background: url(/images/sub02-webtoon-mobile.svg) no-repeat top / cover;}
+  .banner-btn {overflow-y: hidden;}
+}
+
+
+
+
+/* 클릭 유도 */
+.side-menu,
+.side-menu-pan ul li:first-child a
+{position: relative;}
+
+/* 반대 모양 → 서브 메뉴 */
+.side-menu::after,
+.side-menu-pan ul li:first-child a::after
+{content: 'click'; position: absolute; width: 40px; height: 40px; background: var(--btn-blue01); border-radius: 15px 15px 15px 0; color: var(--white); font-size: var(--font-15); animation: click 01s infinite; top: -40px; right: -40px; z-index: 50; text-align: center; line-height: 40px; box-shadow: var(--main-shadow);}
+
+.side-menu::after
+{right: -35px;}
+.side-menu-pan ul li:first-child a::after
+{top: -20px; right: 60px;}
+
+@keyframes click {
+  0% {opacity: 1;}
+  50% {opacity: 1; background: var(--point-pink01);}
+}

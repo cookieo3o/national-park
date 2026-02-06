@@ -1,0 +1,190 @@
+/* 스위트 300 - Light */
+@font-face {
+  font-family: 'Sweet';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+
+/* 스위트 400 - Regular */
+@font-face {
+  font-family: 'Sweet';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* 스위트 500 - Medium */
+@font-face {
+  font-family: 'Sweet';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+/* 스위트 600 - SemiBold */
+@font-face {
+  font-family: 'Sweet';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+
+/* 스위트 700 - Bold */
+@font-face {
+  font-family: 'Sweet';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* 스위트 800 - ExtraBold */
+@font-face {
+  font-family: 'NexenTire';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/NEXEN_TIRE_Regular.woff') format('woff');
+  font-weight: normal;
+  font-display: swap;
+}
+
+/* 넥센타이어 - 일반 */
+@font-face {
+  font-family: 'NexenTire';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/NEXEN_TIRE_Regular.woff') format('woff');
+  font-weight: normal;
+  font-display: swap;
+}
+
+/* 넥센타이어 - Bold */
+@font-face {
+  font-family: 'NexenTire';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/NEXEN_TIRE_Bold.woff') format('woff');
+  font-weight: 700;
+  font-display: swap;
+}
+
+
+* {margin: 0; padding: 0; box-sizing: border-box; font-size: 20px; font-weight: var(--font-medium);}
+a {color: var(--white); text-decoration: none;}
+li {list-style: none;}
+body  {font-family: var(--font); font-weight: 600; color: var(--gray-80);}
+button {font-family: var(--font); font-weight: 500;  border: none; cursor: pointer;}
+
+
+:root {
+  /* 폰트 */
+  --font: 'Sweet';
+  --point-font: 'NexenTire';
+
+  /* 폰트 두께 */
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-normal: normal;
+
+  /* 폰트 사이즈 */
+  --font-15: 15px;
+  --font-20: 20px;
+  --font-25: 25px;
+  --font-30: 30px;
+  --font-35: 35px;
+  --font-40: 40px;
+  --font-45: 45px;
+  --font-50: 50px;
+
+  /* 컬러 */
+  /* 메인 블루 계열 */
+  --main-color: #00286E;
+  --sub-color: #0050A0;
+  --sea-blue: #007DC8;
+  --deep-sea-blue: #2D78C8;
+  --sky-blue: #4BC8FF;
+  --turquoise-blue: #00AFD7; /* --btn-sky-blue01 랑 같음 */
+  --dark-navy: #0A3764;
+  --bg-blue: #F0F5FA;
+  --bg-dark-blue: #2D78C8;
+
+  /* 세컨드 그린 계열 */
+  --deep-green: #1E6437;
+  --green: #0F7837;
+  --pale-green: #7DBE6E;
+  --bg-green: #F5FAF0;
+
+  /* 포인트 컬러 */
+  /* 그린 */
+  --point-green01: #0A8237;
+  --point-green02: #14A04B;
+  /* 블루 */
+  --hover-bg: #1450D7;
+  --hover-text: #00286E;
+  --btn-blue01: #005FC3;
+  --btn-blue02: #0F73DC;
+  --btn-sky-blue01: #00AFD7;
+  --btn-sky-blue02: #4BC8FF;
+  /* 핑크 */
+  --point-pink01: #F01464;
+  --point-pink02: #FA64AA;
+
+  /* 그레이스케일 */
+  --gray-bg: #5A5A64;
+  --gray-80: #333333;
+  --gray-60: #666666;
+  --gray-50: #555555;
+  --gray-40: #999999;
+  --gray-20: #B3B3B3;
+  --gray-15: #D9D9D9; /* 사진 border값에 많이 쓰임 */
+  --gray-07: #EBEBEB;
+  --gray-05: #E6E6E6;
+  --gray-04: #F0F5FF;
+  --gray-03: #F5F5F5;
+  --gray-02: #F2F2F2;
+  --white: #FFFFFF;
+
+  /* 마진 */
+  --margin-205: 205px;
+  --margin-200: 200px;
+  --margin-100: 100px;
+  --margin-80: 80px;
+  --margin-55: 55px;
+  --margin-50: 50px;
+  --margin-40: 40px;
+  --margin-35: 35px;
+  --margin-30: 30px;
+  --margin-25: 25px;
+  --margin-20: 20px;
+  --margin-15: 15px;
+  --margin-10: 10px;
+  --margin-05: 5px;
+
+  /* 패딩 */
+  --padding-205: 205px;
+  --padding-200: 200px;
+  --padding-115: 115px;
+  --padding-100: 100px;
+  --padding-60: 60px;
+  --padding-55: 55px;
+  --padding-50: 50px;
+  --padding-40: 40px;
+  --padding-35: 35px;
+  --padding-30: 30px;
+  --padding-25: 25px;
+  --padding-20: 20px;
+  --padding-15: 15px;
+  --padding-10: 10px;
+  --padding-05: 5px;
+
+  /* border-radius */
+  --point-radius-10: 0px 10px 10px 10px;
+  --point-radius-15: 0px 15px 15px 15px;
+  --point-radius-20: 0px 20px 20px 20px;
+  --point-radius-30: 0px 30px 30px 30px;
+  --point-radius-50: 0px 50px 50px 50px;
+  --radius-15: 15px;
+  --radius-20: 20px;
+  --radius-30: 30px;
+
+  /* box-shadow */
+  --main-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
+}

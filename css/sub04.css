@@ -1,0 +1,209 @@
+#nav-placeholder {width: 100%;}
+
+
+/* 전체 */
+.sub01-wrap {width: 100%; margin-bottom: 150px;}
+.sub01 {width: 1200px; display: flex; margin: 0 auto; padding-top: 85px; gap: 35px;}
+
+
+/* 왼쪽 부분 */
+.side-menu-wrap {flex: 2; display: flex; gap: 15px; flex-direction: column; margin-top: 70px;}
+.side-menu {width: 100%; position: relative; transition: transform 0.3s ease; z-index: 0;}
+.side-menu-btn {width: inherit; background: var(--gray-05); border-radius: var(--point-radius-15); text-align: left; padding: 15px 20px; color: var(--gray-80); font-weight: var(--font-semibold); transition: background 0.25s ease; position: relative; z-index: 5;}
+.side-menu-btn a {display: block; color: var(--gray-80); font-weight: var(--font-semibold);}
+.side-menu-btn a:hover {color: var(--white);}
+.side-menu-btn::before {content: '';  background: url(/images/btn-arrow-gray.png) no-repeat; width: 18px; height: 20px; position: absolute; right: 0; transform: translateY(-50%) rotate(0deg); transform-origin: left center; transition: transform 0.2s ease; top: 55%;}
+.side-menu-btn:hover {background: linear-gradient(45deg, var(--btn-blue01), var(--btn-blue02)); border-radius: var(--point-radius-15); color: var(--white);}
+.side-menu-btn:hover::before {content: '';  background: url(/images/btn-arrow.png) no-repeat; transform: translateY(-50%) rotate(90deg); transform-origin: left center; top: 45%;}
+.side-menu-btn.active {background: linear-gradient(45deg, var(--btn-blue01), var(--btn-blue02)); border-radius: var(--point-radius-15); color: var(--white);}
+.side-menu-btn.active::before {background: url(/images/btn-arrow.png) no-repeat; transform: translateY(-50%) rotate(90deg); transform-origin: left center; top: 45%;}
+
+.side-menu-pan {width: inherit; background: var(--bg-blue); position: absolute; left: 0; top: 25px; border-radius: var(--point-radius-15); max-height: 0; overflow: hidden; transition: max-height 0.3s ease;}
+.side-menu-pan.active {max-height: 1200px; overflow: visible;}
+.side-menu-pan ul li a {display: block;  padding: 15px 20px; font-size: var(--font-15); color: var(--gray-80); }
+.side-menu-pan ul li a:hover {color: var(--sub-color); font-weight: var(--font-extrabold);}
+.side-menu-pan ul li:first-child {padding-top: 25px;}
+
+
+
+/* 오른쪽 부분 */
+/* 상단 타이틀 */
+.a-side {flex: 9;}
+.intro-title-wrap {display: flex; align-items: center; justify-content: space-between;}
+.intro-title {font-family: var(--point-font); font-size: var(--font-35); color: var(--sub-color);}
+.intro-nav {display: flex;}
+.intro-nav a {display: block; padding: 0 15px; font-size: var(--font-15); color: var(--gray-40); position: relative;}
+.intro-nav a::after {content: ''; position: absolute; top: 3px; right: 0; width: 1px; height: 70%; background: var(--gray-40);}
+.intro-nav a:last-child {color: var(--gray-60);}
+.intro-nav a:last-child::after {content: none;}
+
+
+
+/* 배너 */
+.sub-banner {width: 100%; height: 250px; margin-top: 20px; position: relative;}
+.banner-text {position: absolute;}
+.banner-text h3 {display: inline-block; font-family: var(--point-font); font-size: var(--font-25); background: var(--sub-color); color: var(--white); padding: 8px 20px 5px 20px; border-radius: 30px;}
+/* 배너 설명 */
+.banner-explain {width: 100%; padding: 50px 30px; margin-top: -25px; background: linear-gradient(180deg, var(--gray-03), var(--white))}
+.banner-explain p {font-weight: var(--font-medium); line-height: 30px; text-align: justify;}
+
+
+
+/* 본문 내용 */
+/* 공통 */
+.paragraph {width: 90%; margin: auto; margin-bottom: 75px;}
+.paragraph h2 {font-size: var(--font-30); font-weight: var(--font-bold); color: var(--sub-color); margin-bottom: 30px;}
+.paragraph p {font-weight: var(--font-medium); text-align: justify; line-height: 25px;}
+/* 내용01 - 깃대종 선정 절차 */
+.step-wrap {width: 100%; display: flex;}
+.step-bundle {width: 25%; position: relative;}
+.step-text {position: absolute; top: 50%; left: 50%; transform: translate(-85%, -50%);}
+.step-text p {text-align: center; width: 140%;}
+.step-text .small {color: var(--gray-40); font-size: var(--font-15); line-height: 20px;}
+.step-text-last {transform: translate(-65%, -50%);}
+.step-text-last p {width: 100%;}
+.step-img {width: 100%; height: 120px;}
+.step-img01 {background: url(/images/sub04-step-bg01.png) no-repeat;}
+.step-img02 {background: url(/images/sub04-step-bg02.png) no-repeat;}
+/* 내용02 - 깃대종 선졍 현황 */
+.current-bar {width: 100%; height: 80px; background: url(/images/sub04-condition.svg) no-repeat;}
+/* 내용03 - 국립공원별 깃대종 */
+/* 지도 부분 */
+.sub04-map-wrap {display: flex; align-items: center; justify-content: center; margin-top: 110px;}
+.sub04-map {background: url(/images/sub04-map.svg) no-repeat; width: 50%; height: 610px; position: relative;}
+.sub04-button-wrap {width: 100%; height: 610px; position: absolute; top: 0; left: 0;}
+.paragraph-title {display: flex;}
+.paragraph-title h2 {margin: 0;}
+.sub04-map-expalin {display: flex; align-items:flex-end; justify-content: center; color: var(--gray-40); margin-left: 10px;}
+.sub04-map-expalin i {font-size: var(--font-15); padding-bottom: 5px;}
+.sub04-map-expalin p {font-size: var(--font-15); letter-spacing: -1;}
+.sub-map-btn {border-radius: 25px; transform-origin: center; padding: 5px 20px; background: var(--gray-bg); border-radius: 25px; position: absolute;}
+.sub-map-btn:hover {background: linear-gradient(45deg, var(--btn-blue01), var(--btn-blue02));}
+/* 지도 버튼 위치 */
+/* 순서는 좌 → 우로 작업 */
+.sub-map-btn01 {top: 85px; left: 35px;}       /* 북한산 */
+.sub-map-btn02 {top: 120px; left: 145px;}     /* 치악산 */
+.sub-map-btn03 {top: 35px; right: 80px;}      /* 설악산 */
+.sub-map-btn04 {top: 80px; right: 45px;}      /* 오대산 */
+.sub-map-btn05 {top: 130px; right: 65px;}     /* 태백산 */
+.sub-map-btn06 {top: 195px; left: 0px;}       /* 태안해안 */
+.sub-map-btn07 {top: 180px; left: 170px;}     /* 월악산 */
+.sub-map-btn08 {top: 180px; right: 65px;}     /* 소백산 */
+.sub-map-btn09 {top: 225px; left: 135px;}     /* 속리산 */
+.sub-map-btn10 {top: 270px; left: 45px;}      /* 계룡산 */
+.sub-map-btn11 {top: 295px; left: 145px;}     /* 덕유산 */
+.sub-map-btn12 {top: 285px; right: 40px;}     /* 주왕산 */
+.sub-map-btn13 {bottom: 230px; left: -15px;}  /* 변산반도 */
+.sub-map-btn14 {bottom: 200px; left: 80px;}   /* 내장산 */
+.sub-map-btn15 {bottom: 195px; right: 160px;  z-index: 1;} /* 가야산 */
+.sub-map-btn16 {bottom: 185px; right: 45px;}  /* 경주 */
+.sub-map-btn17 {bottom: 75px; left: 10px;}    /* 월출산 */
+.sub-map-btn18 {bottom: 85px; left: 105px;}   /* 다도해해상 */
+.sub-map-btn19 {bottom: 110px; right: 95px;}  /* 한려해상 */
+.sub-map-btn20 {bottom: 10px;  left: 45px;}   /* 한라산 */
+/* ⭐빼먹은 거 3개⭐ */
+.sub-map-btn21 {bottom: 150px; left: 5px;}   /* 무등산 */
+.sub-map-btn22 {bottom: 155px; left: 130px; z-index: 5;}  /* 지리산 */
+.sub-map-btn23 {bottom: 235px; left: 220px;}  /* 팔공산 */
+
+/* 지도 버튼 호버 시 이미지 */
+.sub-map-btn01:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img01.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn02:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img02.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn03:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img03.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn04:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img04.svg) no-repeat center; width: 200px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn05:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img05.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn06:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img06.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn07:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img07.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn08:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img08.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn09:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img09.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn10:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img10.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn11:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img11.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn12:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img12.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn13:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img13.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn14:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img14.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn15:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img15.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn16:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img16.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn17:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img17.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn18:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img18.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn19:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img19.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn20:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img20.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn21:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img21.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn22:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img22.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+.sub-map-btn23:hover::after {content: ''; position: absolute; background: url(/images/sub04-hover-img23.svg) no-repeat center; width: 190px; height: 85px; z-index: 50; top: -90px; left: -50px;}
+
+/* 하단 설명 */
+.hanlasan {color: var(--gray-40); font-size: var(--font-15); padding-top: var(--padding-50);}
+
+
+
+
+/* 모바일 팝업 */
+.map-popup {display: none; position: fixed; top: 60%; left: 50%; transform: translate(-50%, -50%); background: url(/images/sub04-map-popup.svg) no-repeat center / contain;  z-index: 1000; width: 80%; height: 255px;}
+.map-popup .popup-close {position: absolute; background: url(/images/popup-close.svg) no-repeat; width: 25px; height: 25px; top: 10px; right: 10px; cursor: pointer;}
+
+/* ⭐⭐⭐반응형⭐⭐⭐ */
+@media (max-width: 768px){
+  * {margin: 0; padding: 0; box-sizing: border-box;}
+  html, body {width: 100%;  overflow-x: hidden;}
+
+  .sub01-wrap {margin-bottom: 50px;}
+  .sub01 {width: 100%; margin: 0; padding: 0; overflow: hidden;}
+  .a-side {width: 100%; margin: 0;}
+  .side-menu-wrap {display: none;}
+  .intro-title-wrap {width: 100%; display: flex; align-items: center; justify-content: center; margin: 0;}
+  .intro-title {margin: 0; text-align: center; padding: 30px 0;}
+  .intro-nav {display: none;}
+  .sub-banner {width: 100%; height: 320px; margin: auto; margin-top: 0px;}
+  .banner-text h3 {margin-left: 20px;}
+
+  .paragraph {width: 80%; text-align: center;}
+  /* 내용01 - 깃대종 선정 절차 */
+  .step-wrap {width: 100%; flex-wrap: wrap;}
+  .step-bundle {width: 50%; margin-bottom: 20px;}
+  .step-img {width: 175px; height: 95px; background-size: contain;}
+  .step-text {width: 55%; transform: translate(-75%, -50%);}
+  .step-text p {width: 100%; font-size: 18px;}
+  .step-text .small {width: 100%; font: 10px;}
+
+  /* 내용02 - 깃대종 선졍 현황 */
+  .current-bar {width: 100%; background: url(/images/sub04-condition-moblie.svg) no-repeat; height: 150px;}
+
+  /* 내용03 - 국립공원별 깃대종 */
+  .paragraph-title {flex-direction: column; }
+  .sub04-map-expalin {display: none;}
+  /* 지도 부분 */
+  .paragraph:last-child {width: 95%;}
+  .sub04-map-wrap  {display: block; width: 100%; margin-top: 30px;}
+  .sub04-map {width: 100%; height: auto; background: none;}
+  .sub04-button-wrap {position: static; display: grid; width: 100%; height: auto; grid-template-columns: repeat(4, 1fr); row-gap: 20px;}
+  .sub-map-btn {position: static; width: 100%; border-radius: 0; padding: 10px 20px;}
+  .sub-map-btn a {text-align: center;}
+  /* 각 줄의 첫 번째 */
+  .sub-map-btn:nth-child(4n + 1) {border-radius: 30px 0 0 30px;}
+  /* 각 줄의 마지막 */
+  .sub-map-btn:nth-child(4n), .sub-map-btn20 {border-radius: 0 30px 30px 0;}
+
+}
+
+
+
+
+/* 클릭 유도 */
+.side-menu,
+.side-menu-pan ul li:first-child a
+{position: relative;}
+
+/* 반대 모양 → 서브 메뉴 */
+.side-menu::after,
+.side-menu-pan ul li:first-child a::after
+{content: 'click'; position: absolute; width: 40px; height: 40px; background: var(--btn-blue01); border-radius: 15px 15px 15px 0; color: var(--white); font-size: var(--font-15); animation: click 01s infinite; top: -40px; right: -40px; z-index: 50; text-align: center; line-height: 40px; box-shadow: var(--main-shadow);}
+
+.side-menu::after
+{right: -35px;}
+.side-menu-pan ul li:first-child a::after
+{top: -20px; right: 60px;}
+
+@keyframes click {
+  0% {opacity: 1;}
+  50% {opacity: 1; background: var(--point-pink01);}
+}
