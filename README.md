@@ -1,5 +1,7 @@
 # 🌲국립공원 리뉴얼🌲
-> **일관성 있는 UI와 정리된 디자인 환경에서의 사용을 위해 전반적인 리뉴얼을 진행하였습니다😊**
+> **일관성 있는 UI와 정리된 디자인 환경에서의 사용을 위해 전반적인 리뉴얼을 진행하였습니다😊** <br>
+> **홈페이지💻 https://cookieo3o.github.io/national-park/** <br>
+> **스타일 가이드🎨 https://cookieo3o.github.io/national-park/**
 <br>
 
 
@@ -10,11 +12,13 @@
 ## 작업 환경
 ![TOOL](https://img.shields.io/badge/TOOL-VS_CODE-blue) ![TOOL](https://img.shields.io/badge/TOOL-figma-brown) ![TOOL](https://img.shields.io/badge/TOOL-phtoshop-blue) ![TOOL](https://img.shields.io/badge/TOOL-illust-orange) <br>
 ![STATIC](https://img.shields.io/badge/STATIC-HTML-green) ![STATIC](https://img.shields.io/badge/STATIC-CSS-hotpink) ![STATIC](https://img.shields.io/badge/STATIC-JAVA_script-yellow) 
-
+<br>
+<br>
 
 ## 프로젝트 개요
 본 프로젝트는 기존 웹사이트의 정보 구조와 사용성 문제를 분석하고, 이를 개선하기 위한 UX/UI 리디자인을 목표로 한다.<br>
 현재 사이트는 콘텐츠는 풍부하지만 정보의 위계와 구분이 명확하지 않아 가독성과 탐색 효율이 떨어지며, 중요한 정보를 놓치기 쉬운 구조를 가지고 있다.
+<br>
 <br>
 
 ## 리뉴얼 방향
@@ -153,4 +157,5 @@
 1. 로고 클릭 시 메인 페이지 이동  
 2. 메뉴 클릭 시 해당 페이지 이동  
 3. SNS 아이콘 클릭 시 외부 페이지 이동  
-
+<br>
+<br>
