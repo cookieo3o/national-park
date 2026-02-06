@@ -1,6 +1,7 @@
 # 🌲국립공원단 리뉴얼🌲
 > **일관성 있는 UI와 정리된 디자인 환경에서의 사용을 위해 전반적인 리뉴얼을 진행하였습니다😊** <br>
-> **홈페이지💻 https://cookieo3o.github.io/national-park/**
+> **홈페이지💻 https://cookieo3o.github.io/national-park/** <br>
+> **피그마🎨 https://www.figma.com/design/Ui8qBzNovI6ykrwsKE71ma/%EB%A6%AC%EB%89%B4%EC%96%BC?node-id=0-1&t=q0xnO2IX0shthkjB-1**
 <br>
 <br>
 
