@@ -1,11 +1,14 @@
 # 🌲국립공원 리뉴얼🌲
 > **일관성 있는 UI와 정리된 디자인 환경에서의 사용을 위해 전반적인 리뉴얼을 진행하였습니다😊** <br>
-> **홈페이지💻 https://cookieo3o.github.io/national-park/** <br>
-
+> **홈페이지💻 https://cookieo3o.github.io/national-park/**
+<br>
+<br>
 
 | Before | Renewal |
 |--------|-------|
 | <img src="images/before.png" width="860">| <img src="images/renewal.png" width="860"> |
+
+<br>
 
 | Style Guide |
 |--------|
