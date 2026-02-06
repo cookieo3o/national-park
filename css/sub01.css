@@ -1,4 +1,4 @@
-#nav-placeholder {width: 100%;}
+/#nav-placeholder {width: 100%;}
 
 
 /* 전체 */
@@ -10,11 +10,11 @@
 .side-menu-wrap {flex: 2; display: flex; gap: 15px; flex-direction: column; margin-top: 70px;}
 .side-menu {width: 100%; position: relative; transition: transform 0.3s ease;}
 .side-menu-btn {width: inherit; background: var(--gray-05); border-radius: var(--point-radius-15); text-align: left; padding: 15px 20px; color: var(--gray-80); font-weight: var(--font-semibold); transition: background 0.25s ease; position: relative; z-index: 5;}
-.side-menu-btn::before {content: '';  background: url(/images/btn-arrow-gray.png) no-repeat; width: 18px; height: 20px; position: absolute; right: 0; transform: translateY(-50%) rotate(0deg); transform-origin: left center; transition: transform 0.2s ease; top: 55%;}
+.side-menu-btn::before {content: '';  background: url(../images/btn-arrow-gray.png) no-repeat; width: 18px; height: 20px; position: absolute; right: 0; transform: translateY(-50%) rotate(0deg); transform-origin: left center; transition: transform 0.2s ease; top: 55%;}
 .side-menu-btn:hover {background: linear-gradient(45deg, var(--point-green01), var(--point-green02)); border-radius: var(--point-radius-15); color: var(--white);}
-.side-menu-btn:hover::before {content: '';  background: url(/images/btn-arrow.png) no-repeat; transform: translateY(-50%) rotate(90deg); transform-origin: left center; top: 45%;}
+.side-menu-btn:hover::before {content: '';  background: url(../images/btn-arrow.png) no-repeat; transform: translateY(-50%) rotate(90deg); transform-origin: left center; top: 45%;}
 .side-menu-btn.active {background: linear-gradient(45deg, var(--point-green01), var(--point-green02)); border-radius: var(--point-radius-15); color: var(--white);}
-.side-menu-btn.active::before {background: url(/images/btn-arrow.png) no-repeat; transform: translateY(-50%) rotate(90deg); transform-origin: left center; top: 45%;}
+.side-menu-btn.active::before {background: url(../images/btn-arrow.png) no-repeat; transform: translateY(-50%) rotate(90deg); transform-origin: left center; top: 45%;}
 
 .side-menu-pan {width: inherit; background: var(--bg-green); position: absolute; left: 0; top: 25px; border-radius: var(--point-radius-15); max-height: 0; overflow: hidden; transition: max-height 0.3s ease;}
 .side-menu-pan.active {max-height: 1200px; overflow: visible;}
