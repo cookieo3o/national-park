@@ -1,0 +1,226 @@
+* {margin: 0; padding: 0; box-sizing: border-box; font-size: 20px;}
+a {color: var(--white); text-decoration: none;}
+li {list-style: none;}
+body  {font-family: var(--font); font-weight: 600; color: var(--gray-80);}
+button {font-family: var(--font); font-weight: 500;  border: none; cursor: pointer;}ellipsebv.title {font-family: 'NexenTire'; color: var(--white); font-size: 50px; font-weight: normal;}
+.sub-title {font-family: 'NexenTire'; font-size: 45px; margin-bottom: 35px; margin-left: 5px; font-weight: normal;}
+.park-info-title {font-family: 'NexenTire'; font-size: 30px; margin-bottom: 10px; margin-left: 5px; font-weight: normal;}
+.wrap {padding: 100px 0;}
+#nav-placeholder {display: contents;}
+
+
+
+/* 헤더 */
+.header {background: var(--white); height: 90px; border-bottom: 1px solid #ddd; position: relative;} 
+.header-inner {max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 5px; gap: 15px;}
+.logo {margin-bottom: 10px; flex: 1; background: url(../images/logo-header.png) no-repeat; width: 90px; height: 60px; cursor: pointer;}
+.logo a {display: block; width: 90px; height: 60px;}
+.gnb {flex: 8;}
+.gnb ul {display: flex; list-style: none; padding: 0; margin: 0; justify-content: space-between;}
+.menu-item a {display: block; padding: 30px 0; text-decoration: none; color: var(--gray-80); transition: 0.5s;}
+.menu-item a:hover {font-weight: var(--font-bold); color: var(--hover-text);}
+.nav-icon-wrap {flex: 1; display: flex; align-items: center; justify-content: center;}
+.nav-icon a {color: var(--gray-80);}
+.nav-icon a:nth-child(1) {margin-right: var(--margin-15);}
+
+
+
+/* 서브 메뉴 */
+/* 서브 전체 영역이랑 이미지 영역 */
+/* ⭐visibility가 없어서 계속 서브 메뉴가 opacity: 0;으로 남아있었던 것⭐ */
+.sub-menu {position: absolute; left: 0; right: 0; top: 90px; max-height: 540px; opacity: 0; transition: max-height 0.4s ease-out, opacity 0.3s ease-out; display: flex; font-weight: var(--font-medium); background: var(--white); z-index: 50; visibility: hidden;}
+.sub-menu.active {display: flex; opacity: 1; visibility: visible;}
+.img-area {width: 440px; position: relative;}
+.img-area img {width: 100%; height: 100%;}
+.nav-img-text {position: absolute; left: 0; bottom: 0; color: var(--white); margin: var(--margin-20);}
+.nav-img-text h2 {font-family: var(--point-font); font-size: var(--font-30); font-weight: var(--font-normal);}
+.nav-img-text p {color: var(--gray-20);}
+
+/* 서브 우측 영역 */
+/* 서브 공통 */
+/* 서브 영역 */
+.sub-area {width: 1160px;  padding: var(--padding-20) var(--padding-10);}
+.sub-area a {font-weight: var(--font-semibold);}
+
+/* 서브 소메뉴 hover 시 */
+.sub-area a:hover {color: var(--hover-text);}
+/* 서브 섹션 */
+.sub-section {border-bottom: 2px solid #F0F0F0; padding: var(--padding-10); display: flex; width: 100%;}
+.sub-section:nth-child(1) {padding-top: 0;}
+/* 서브 대메뉴 좌측 */
+.large-menu {flex-shrink: 0; width: 150px;}
+.large-menu a {display: block; background: var(--gray-05); padding: 5px 12px; color: var(--gray-80); border-radius: var(--point-radius-10); text-align: center; transition: background 0.3s, color 0.1s; flex: 1;}
+.large-menu a:hover {background: var(--hover-text); color: var(--white); font-weight: var(--font-semiBold);}
+/* 서브 소메뉴 우측 */
+.small-menu ul {display: flex; width: 1020px;}
+.small-menu ul li  {margin-left: 15px;}
+.small-menu ul li a {display: block; width: 145px; padding: 5px;  white-space: nowrap; color: var(--gray-60);}
+
+
+/* 각 메뉴마다 변동 되는 부분 */
+.sub-menu div:last-child {border-bottom: none;}
+/* sub01 - 국립공원탐방 */
+.sub01-sm-menu02 ul li {margin-bottom: var(--margin-15);}
+.sub01-sm-menu02 ul:last-child li {margin-bottom: 0;}
+.align-right {margin-right: 40px;}
+/* sub02 - 국립공원예약 */
+.sub02 .large-menu {width: 190px;}
+.align-left {padding-left: 20px;}
+/* sub04 - 국립공원자원 */
+.sub04 .large-menu {width: 190px;}
+.sub04 .small-menu ul li a {width: 180px;}
+.sub04-sm-menu03 ul li {margin-bottom: var(--margin-15);}
+.sub04-sm-menu03 ul:last-child li {margin-bottom: 0;}
+.sub04-lg-menu01 {position: relative;}
+.sub04-lg-menu01::before {content: 'NEW'; position: absolute; width: 40px; height: 20px; background: var(--white); border-radius: 20px; border: 2px solid var(--gray-20); font-size: 10px; font-weight: var(--font-extrabold); text-align: center; line-height: 20px; left: -10px; top: -15px; transition: 0.2s; z-index: 1000;}
+.sub04-lg-menu01:hover::before {border: 2px solid var(--hover-text); color: var(--hover-text);} 
+/* sub05 - 행정ㆍ민원 */
+.sub05-sm-menu05 ul li {margin-bottom: var(--margin-15);}
+.sub05-sm-menu05 ul:last-child li {margin-bottom: 0;}
+/* sub06 - 국민소통 */
+.sub06 .small-menu ul li a {width: 170px;}
+.sub06-sm-menu03 ul li {margin-bottom: var(--margin-15);}
+.sub06-sm-menu03 ul:last-child li {margin-bottom: 0;}
+/* sub07 - 기관소개 */
+.sub07 .large-menu {width: 160px;}
+.sub07-sm-menu02 ul li {margin-bottom: var(--margin-15);}
+.sub07-sm-menu02 ul:last-child li {margin-bottom: 0;}
+
+
+
+/* 검색창 */
+.search-bar {left: 0; right: 0; height: 0; background: var(--white); border-radius: 0 0 20px 20px; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.4s; overflow: hidden;  position: absolute; z-index: 100;}
+.search-bar.active {display: flex; opacity: 1; visibility: visible; height: 200px;}
+.search-bar-wrap {width: 1015px; height: 50px; border-radius: var( --point-radius-15); border: 2.5px solid var(--gray-40); margin: 150px 0; padding: var(--padding-05) var(--padding-10); display: flex; justify-content: space-between; color: var(--gray-40); transition: all 0.3s ease;}
+.search-input {flex: 9.5; border: none; font-family: var(--font); font-size: var(--font-25); outline: none; color: var(--gray-80);}
+/* 검색창 클릭했을 때 효과 */
+.search-bar-wrap:focus-within {border: 2.5px solid var(--deep-green); box-shadow: var(--main-shadow);}
+.search-bar-wrap:focus-within .search-btn i {color: var(--deep-green);}
+.search-bar-wrap:focus-within input::placeholder {visibility: hidden;}
+/* 검색창 버튼 */
+.search-btn {flex: 0.5; background: none;}
+.search-btn i {font-size: var(--font-30); color: var(--gray-40);}
+/* 검색창 닫기 버튼 */
+.search-close {width: 30px; height: 30px; background: url(/images/search-close.png) no-repeat; position: absolute; right: 470px; top: 20px;}
+.search-close:hover {background: url(/images/search-close-hover.png) no-repeat; }
+
+
+
+/* 푸터 */
+.footer {width: 100%; background: var(--dark-navy); color: var(--white); font-weight: var(--font-light);}
+.footer-wrap {width: 1200px; margin: auto; padding: 50px 0px; text-align: center; display: flex; flex-direction: column;}
+.footer-menu {display: flex; justify-content: space-around; margin: 25px 0;}
+.footer-menu a {display: block; padding: 5px 25px; font-weight: var(--font-light); position: relative;}
+.footer-menu a::after {content: ''; position: absolute; width: 2px; height: 15px; background: var(--white); right: 0; top: 10px}
+.footer-menu a:last-child::after {opacity: 0;}
+.footer-bottom {display: flex; align-items: center; justify-content: space-between; padding: 30px 0;  border-top: 1px solid rgba(240, 240, 240, 0.5);}
+.add-text {text-align: left; flex: 8; line-height: 30px;}
+.sns-icon-wrap {display: flex; flex: 2; gap: 5px;}
+
+
+
+
+
+.mobile-menu {display: none;}
+
+/* ⭐⭐⭐반응형⭐⭐⭐ */
+@media (max-width: 768px){
+  * {margin: 0; padding: 0; box-sizing: border-box;  overflow-x: hidden;}
+  html, body {width: 100%;}
+  .wrap {padding: 60px 0;}
+  .sub-title {font-size: var(--font-35); margin-bottom: var(--margin-40); text-align: center;}
+
+
+  /* 헤더 */
+  .header {width: 100%; padding: 10px; overflow: hidden;}
+  .header-inner {width: 90%; margin: auto;}
+  .logo {flex: 0 0 auto; margin-bottom: 10px; background: url(../images/logo-header.png) no-repeat; width: 90px; height: 60px; cursor: pointer;}
+  .logo a {width: 100%;}
+  .gnb {display: none;}
+  .nav-icon-wrap {flex: 0 0 auto;}
+  .search-bar {display: none;}
+  .nav-icon {display: none;}
+  .toggle {width: 25px; display: flex; flex-direction: column; gap: 4px;  margin-left: 5px; cursor: pointer;} 
+  .toggle-bar {width: 100%; height: 4px; background: var(--gray-80); border-radius: 5px; display: inline-block;}
+  .toggle.active span:nth-child(1) {transform: rotate(90deg);}
+
+
+
+  /* 풋터 */
+  .footer-wrap {width: 80%; flex-direction: column-reverse; overflow: hidden;}
+  .footer-logo {display: none;}
+  .footer-menu {width: 100%; flex-wrap: wrap; justify-content: left; font-size: var(--font-15);}
+  .footer-menu a {padding: 10px 15px;}
+  .footer-menu a::after {content: ''; position: absolute; width: 2px; height: 15px; background: var(--white); right: 0; top: 15px}
+  .footer-bottom {flex-direction: column-reverse; padding: 0; align-items: flex-start; margin: 0 20px; padding-top: 30px; border: none;}
+  .add-text {font-size: var(--font-15); font-size: var(--font-15); padding-top: 30px; border: none;}
+  .add-text span {font-weight: var(--font-bold);}
+  .sns-icon-wrap {padding-bottom: 30px; width: 100%; align-items: center; justify-content: center; gap: 10px; margin: auto;  border-bottom: 1px solid rgba(240, 240, 240, 0.5);}
+  .sns-icon-wrap a img {width: 40px; height: 40px;}
+
+
+
+  /* 모바일 메뉴 */
+  .mobile-menu {display: block; position: fixed; top: 82px; right: 0; left: 0; bottom: 0; background: var(--white); visibility: hidden; opacity: 0; z-index: 500;}
+  .mobile-menu.active {opacity: 1; visibility: visible;}
+  .accordion-menu a {font-weight: var(--font-bold); color: var(--gray-80);}
+  .accordion-menu-title {border-bottom: 1px solid var(--gray-15);}
+  /* 대메뉴 */
+  .accordion-menu-title a {width: 100%; display: block; padding: 15px; color: var(--gray-80); text-align: center;}
+  .accordion-menu-title.active a {background: linear-gradient(45deg, var(--btn-blue01), var(--btn-blue02)); color: var(--white);}
+  .accordion-menu-title a:hover {background: linear-gradient(45deg, var(--btn-blue01), var(--btn-blue02)); color: var(--white);}
+  .accordion-title {border-bottom: 1px solid var(--gray-15);}
+  .accordion-title a {width: 100%; display: block; background: #F2F2F2; padding: 15px; text-align: center;}
+  .accordion-title a:hover {background: var(--white); color: var(--hover-text);}
+  .accordion-item {max-height: 0; overflow: hidden; position: relative; transition: max-height 0.4s ease-out}
+  .accordion-item.active {max-height: 600px;}
+  .accordion-content {max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out;}
+  .accordion-content.active {max-height: 600px;}
+  .accordion-content ul li a {display: block; padding: 15px 0; text-align: center;}
+  .accordion-content ul li a:hover {color: var(--hover-text); }
+}
+
+
+
+
+/* 클릭 유도 */
+.gnb ul li:first-child a,
+.sub01-lg-menu01 a,
+.gnb ul li:nth-child(4) a,
+.nav-icon a,
+.sub04-lg-menu01 a,
+.sub04-sm-menu02 li:first-child,
+.sub04-sm-menu03 ul:first-child li:first-child,
+.sub04-sm-menu04 ul:first-child li:first-child
+{position: relative;}
+
+/* 원래 모양 → 메인 메뉴 */
+.gnb ul li:first-child a::after,
+.nav-icon a::after,
+.sub01-lg-menu01 a::after,
+.gnb ul li:nth-child(4) a::after
+{content: 'click'; position: absolute; width: 40px; height: 40px; background: var(--btn-blue01); border-radius: var(--point-radius-15); color: var(--white); font-size: var(--font-15); animation: click 1s infinite; bottom: -10px; right: -40px; z-index: 500; text-align: center; line-height: 40px; box-shadow: var(--main-shadow);}
+/* 반대 모양 → 서브 메뉴 */
+.sub04-lg-menu01 a::after,
+.sub04-sm-menu02 li:first-child::after,
+.sub04-sm-menu03 ul:first-child li:first-child:after,
+.sub04-sm-menu04 ul:first-child li:first-child:after
+{content: 'click'; position: absolute; width: 40px; height: 40px; background: var(--btn-blue01); border-radius: 15px 15px 15px 0; color: var(--white); font-size: var(--font-15); animation: click 01s infinite; top: -40px; right: -40px; z-index: 500; text-align: center; line-height: 40px; box-shadow: var(--main-shadow);}
+
+.nav-icon a::after
+{top: 25px; right: -40px;}
+.nav-icon a:first-child::after
+{right: -35px;}
+.sub01-lg-menu01 a::after
+{bottom: -40px;}
+.sub04-sm-menu02 li:first-child::after
+{left: 90px; top: -35px;}
+.sub04-sm-menu03 ul:first-child li:first-child:after
+{left: 125px; top: -35px;}
+.sub04-sm-menu04 ul:first-child li:first-child:after
+{left: 115px; top: -35px;}
+
+@keyframes click {
+  0% {opacity: 1;}
+  50% {opacity: 1; background: var(--point-pink01);}
+}

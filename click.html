@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>클릭 유도</title>
+ 
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    .click {display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: var(--btn-blue01); border-radius: var(--point-radius-15); color: var(--white); font-size: var(--font-15); animation: click 01s infinite;}
+
+    @keyframes click {
+      0% {opacity: 1;}
+      50% {opacity: 1; background: var(--point-green02);}
+    }
+  </style>
+  <link rel="stylesheet" href="css/root.css"/>
+</head>
+
+<body>
+  <div class="click">
+    click
+  </div>
+</body>
+</html>

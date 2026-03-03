@@ -1,0 +1,60 @@
+.login-wrap {width: 100%; display: flex; align-items: center; justify-content: center;}
+.login-box {width: 30%; text-align: center; margin: 40px 0; padding: 40px 0;}
+.login-logo {padding-bottom: 25px;}
+.login-logo a {display: block; }
+
+
+/* 입력창 */
+.input-wrap {width: 100%;  position: relative;}
+.input-wrap div {position: relative;}
+.input-wrap div label {position: absolute; top: 30px; left: 30px; color: var(--gray-40); box-sizing: border-box;}
+.input-wrap input:focus + label,
+.input-wrap input:not(:placeholder-shown) + label
+ {top: 10px; font-size: var(--font-15);}
+.input-wrap input {display: block; width: 100%; height: 80px; border-radius: var(--radius-15); border: 2px solid var(--gray-05); font-family: var(--font); color: var(--gray-40); padding: var(--padding-25); margin: 15px 0; outline: none;}
+.input-wrap input:focus {border: 2px solid var(--sea-blue); box-shadow: var(--main-shadow);}
+
+
+/* 체크 박스 */
+.input-wrap input[type="checkbox"] {display: none;}
+.checkbox {display: flex; align-items: center; gap: 5px; color: var(--gray-40); font-size: var(--font-15); font-weight: var(--font-semibold); padding: 0 30px; cursor: pointer; position: relative; margin: 5px 0;}
+.checkbox:has(input:checked) {color: var(--sea-blue);}
+
+
+/* 원 체크 박스 */
+.checkbox::before {content: ''; width: 25px; height: 25px; border: 2px solid var(--gray-40); border-radius: 50%; box-sizing: border-box; }
+.checkbox::after {content: ''; position: absolute; background: url(/images/login-check.png) no-repeat; top: 6px; left: 34px; width: 16px; height: 12px;}
+.checkbox:has(input:checked)::before {border: 2px solid var(--sea-blue);}
+.checkbox:has(input:checked)::after {background: url(/images/login-check-active.png) no-repeat;}
+
+
+/* 로그인 버튼 */
+.login-btn {width: 100%; height: 80px; background: var(--gray-40); border-radius: var(--radius-15); color: var(--white); margin-top: 15px;}
+.login-btn:hover {background: linear-gradient(45deg, var(--btn-blue01), var(--btn-blue02)); }
+
+
+/* 로그인 찾기 */
+.login-search {width: 100%; margin: 45px auto; display: flex; justify-content: center;}
+.login-search a {display: block; color: var(--gray-40); font-weight: var(--font-semibold); padding: 5px 30px; position: relative;}
+.login-search a::before {content: ''; position: absolute; width: 2px; height: 20px; background: var(--gray-40); top: 8px; right: 0;}
+.login-search a:last-child::before {content: none;}
+.login-search a:hover {color: var(--sea-blue);}
+
+
+
+
+
+/* ⭐⭐⭐반응형⭐⭐⭐ */
+@media (max-width: 768px){
+  * {margin: 0; padding: 0; box-sizing: border-box; overflow-x: hidden;}
+  html, body {width: 100%;}
+
+  .login-wrap {width: 100%;}
+  .login-box {width: 80%;}
+  .login-search {width: 100%;}
+  .input-wrap div label {top: 45px;}
+  .input-wrap input:focus + label,
+  .input-wrap input:not(:placeholder-shown) + label
+  {top: 30px; font-size: var(--font-15);}
+  .login-search a {font-size: var(--font-15);}
+}
