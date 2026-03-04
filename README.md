@@ -7,13 +7,13 @@
 
 | Before | Renewal |
 |--------|-------|
-| <img src="images/before.png" width="860">| <img src="images/renewal.png" width="860"> |
+| <img src="before.png" width="860">| <img src="renewal.png" width="860"> |
 
 <br>
 
 | Style Guide |
 |--------|
-| <img src="images/styleguide.png" width="1620"> |
+| <img src="styleguide.png" width="1620"> |
 <br>
 <br>
 
