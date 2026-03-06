@@ -89,19 +89,6 @@
 3. 버튼 호버 시 위치 표시 및 강조 효과 적용
 
 
-### Quick Menu
-
-| 구분 | 요소 | 클래스 / 구조 | 기능 설명 |
-|----|----|----|----|
-| Quick Menu | 메뉴 영역 | `section#quick-menu` | 주요 서비스 바로가기 제공 |
-| Quick Menu | 아이콘 | `.icon-wrap a` | 서비스별 페이지 이동 |
-| Quick Menu | 텍스트 | `.icon-wrap p` | 아이콘 설명 텍스트 |
-
-**동작 정의**
-1. 아이콘 호버 시 글자 및 포인트 색상 변경  
-2. 이미지가 위쪽으로 이동하며 강조 효과 적용  
-
-
 ### Notice Banner
 
 | 구분 | 요소 | 클래스 / 구조 | 기능 설명 |
@@ -159,7 +146,6 @@
 | Footer | 푸터 영역 | `footer` | 사이트 하단 정보 |
 | Footer | 로고 | `.footer-logo a img` | 메인 페이지 이동 |
 | Footer | 메뉴 | `.footer-menu a` | 페이지 이동 |
-| Footer | SNS 아이콘 | `.sns-icon-wrap a img` | SNS 페이지 이동 |
 
 **동작 정의**
 1. 로고 클릭 시 메인 페이지 이동  
